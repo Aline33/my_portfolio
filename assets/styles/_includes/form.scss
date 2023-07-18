@@ -1,0 +1,9 @@
+form label {
+  // utiliser la class bootstrap form-label
+  font-weight: bold;
+}
+
+form input {
+  // utiliser la class bootstrap form-control
+  border-radius: $border-radius;
+}

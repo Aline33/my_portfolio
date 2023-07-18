@@ -1,0 +1,19 @@
+// assets/styles/global.scss
+
+// customize some Bootstrap variables
+$primary: #D1A8A5FF;
+
+// the ~ allows you to reference things in node_modules
+@import "~bootstrap/scss/bootstrap";
+@import "_includes/variables.scss";
+@import "_includes/button.scss";
+@import "_includes/form.scss";
+
+* {
+    background-color: $white-color;
+    color: $black-color;
+    font-family: $font-text;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
