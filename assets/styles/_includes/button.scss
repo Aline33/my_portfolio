@@ -1,0 +1,35 @@
+button {
+  background-color: $primary-color;
+  border-radius: $border-radius;
+  border: solid 1px $primary-color;
+  padding: 0 12px;
+}
+
+.pf-navbutton {
+  padding: 8px 20px;
+}
+
+button:hover {
+  background-color: $secondary-color;
+  border: solid 1px $secondary-color;
+}
+
+.pf-button-edit {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+
+.pf-button-delete {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  color: darkred;
+}
+
+.pf-button-delete:hover, .pf-button-edit:hover {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  text-decoration: underline;
+}
