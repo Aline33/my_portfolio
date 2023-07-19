@@ -11,6 +11,11 @@
   padding: 0 4rem;
 }
 
+.pf-pink-all {
+  background-color: #F4EAE9;
+  padding: 0 4rem;
+}
+
 /* End background */
 
 /* Welcome section */
@@ -58,3 +63,24 @@
 }
 
 /* End my history section */
+
+/* My projects section */
+
+.card {
+  width: 22rem;
+  margin-bottom: 4rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.pf-box-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px 1em;
+}
+
+/* End my projects section */
