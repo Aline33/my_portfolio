@@ -3,6 +3,7 @@
 .pf-pink-bottom {
   height: 100vh;
   background-image: -webkit-linear-gradient(115deg, #F4EAE9 50%, #ffffff 50%);
+  padding: 0 4rem;
 }
 
 .pf-pink-top {
@@ -84,3 +85,14 @@
 }
 
 /* End my projects section */
+
+/* Contact section */
+
+svg {
+  width: 4rem;
+  height: 4rem;
+  fill: currentColor;
+  margin-bottom: 2rem;
+}
+
+/* End contact section */
