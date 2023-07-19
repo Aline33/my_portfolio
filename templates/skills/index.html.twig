@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Mes compétences{% endblock %}
+
+{% block body %}
+Mes compétences :
+    <a href="{{ path('app_skills_new') }}">Ajouter une compétence</a>
+    <ul>
+        {% for skill in skills %}
+            <a href="{{ path('app_skills_show', {'id': skill.id}) }}">
+                <li>{{ skill.name }}</li>
+            </a>
+        {% endfor %}
+    </ul>
+{% endblock %}
