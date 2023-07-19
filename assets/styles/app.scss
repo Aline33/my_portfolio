@@ -9,9 +9,9 @@ $primary: #D1A8A5FF;
 @import "_includes/button.scss";
 @import "_includes/form.scss";
 @import "_includes/title.scss";
+@import "_includes/home.scss";
 
 * {
-    background-color: $white-color;
     color: $black-color;
     font-family: $font-text;
     padding: 0;
