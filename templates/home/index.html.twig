@@ -3,8 +3,11 @@
 {% block title %} {{ parent() }} - Bienvenue sur mon portfolio !{% endblock %}
 
 {% block body %}
-    <div class="pf-pink-right">
+    <div class="pf-pink-bottom">
         {% include '_includes/navbar.html.twig' %}
         {% include '_includes/welcome.html.twig'%}
+    </div>
+    <div class="pf-pink-top">
+        {% include '_includes/my_history.html.twig' %}
     </div>
 {% endblock %}

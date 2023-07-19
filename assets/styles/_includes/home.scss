@@ -1,13 +1,60 @@
-.pf-img-rounded {
-  border-radius: 50%;
+/* Background */
+
+.pf-pink-bottom {
+  height: 100vh;
+  background-image: -webkit-linear-gradient(115deg, #F4EAE9 50%, #ffffff 50%);
 }
 
-.pf-pink-right {
-  position: relative;
+.pf-pink-top {
   height: 100vh;
-  background-image: -webkit-linear-gradient(118.5deg, #F4EAE9 50%, #ffffff 50%);
+  background-image: -webkit-linear-gradient(65deg, #ffffff 50%, #F4EAE9 50%);
+  padding: 0 4rem;
+}
+
+/* End background */
+
+/* Welcome section */
+
+.pf-img-rounded {
+  border-radius: 45%;
 }
 
 .pf-welcome-width {
   height: calc(100vh - 150px);
 }
+
+/* End welcome section */
+
+/* My history section */
+
+.pf-logo {
+  width: 260px;
+  height: 130px;
+  margin: 0 0 1rem 0;
+}
+
+.pf-history {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 0;
+}
+
+.pf-wcs {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+
+.pf-mgen, .pf-wcs {
+  width: 40%;
+}
+
+.pf-important-text {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 50rem;
+  margin: 0 auto;
+}
+
+/* End my history section */
