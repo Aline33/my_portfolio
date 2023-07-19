@@ -1,0 +1,21 @@
+<h2 id="project">Mes Projets</h2>
+<div class="pf-box-projects justify-content-center">
+    {% for project in projects %}
+        <div class="card">
+            <img src="https://placehold.co/600x400" class="card-img-top" alt="Page d'accueil du projet {{ project.name }}">
+            <div class="card-body">
+                <h3 class="card-title text-center">{{ project.name }}</h3>
+                <p class="card-text">{{ project.description }}</p>
+                <p class="card-text">
+                    {% for skill in project.skills %}
+                        {{ skill.name }}
+                        {% if not loop.last %} -{% endif %}
+                    {% endfor %}
+                </p>
+                <div class=text-center>
+                    <a class="pf-button" href="#">Voir plus</a>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

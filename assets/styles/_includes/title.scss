@@ -1,0 +1,29 @@
+h1 {
+  font-family: $font-title;
+  text-align: center;
+  font-weight: 700;
+}
+
+.pf-welcome {
+  width: 25rem;
+  text-align: initial;
+}
+
+h2 {
+  font-family: $font-title;
+  font-weight: 700;
+  font-size: 4rem;
+  padding: 4rem 0 2rem 0;
+}
+
+@media screen and (max-width:769px) {
+  .pf-welcome {
+    width: 18rem;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 2rem;
+    padding: 2rem 0 1.5rem 0;
+  }
+}

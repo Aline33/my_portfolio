@@ -1,0 +1,186 @@
+/* Background */
+
+.pf-pink-bottom {
+  height: 100vh;
+  background-image: -webkit-linear-gradient(115deg, #F4EAE9 50%, #ffffff 50%);
+}
+
+.pf-pink-top {
+  height: 100vh;
+  background-image: -webkit-linear-gradient(65deg, #ffffff 50%, #F4EAE9 50%);
+  padding: 0 4rem;
+}
+
+.pf-pink-all {
+  background-color: #F4EAE9;
+  padding: 0 4rem;
+}
+
+/* End background */
+
+/* Welcome section */
+
+.pf-img-rounded {
+  border-radius: 45%;
+}
+
+.pf-welcome-width {
+  height: calc(100vh - 150px);
+}
+
+/* End welcome section */
+
+/* My history section */
+
+.pf-logo {
+  width: 260px;
+  height: 130px;
+  margin: 0 0 1rem 0;
+}
+
+.pf-history {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 2rem 0;
+}
+
+.pf-wcs {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-end;
+}
+
+.pf-mgen, .pf-wcs {
+  width: 40%;
+}
+
+.pf-important-text {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 50rem;
+  margin: 0 auto;
+}
+
+/* End my history section */
+
+/* My projects section */
+
+.card {
+  width: 22rem;
+  margin-bottom: 4rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.pf-box-projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px 1em;
+}
+
+/* End my projects section */
+
+/* Contact section */
+
+.pf-contact {
+  padding: 0 4rem;
+}
+
+svg {
+  width: 4rem;
+  height: 4rem;
+  fill: currentColor;
+  margin-bottom: 2rem;
+}
+
+/* End contact section */
+
+/* Responsive */
+
+@media screen and (max-width:769px) {
+
+  /* Background */
+
+  .pf-pink-bottom {
+    background-image: -webkit-linear-gradient(156deg, #F4EAE9 50%, #ffffff 50%);
+  }
+
+  .pf-pink-top {
+    background-image: -webkit-linear-gradient(24deg, #ffffff 50%, #F4EAE9 50%);
+    padding: 0 0.5rem;
+  }
+
+  .pf-pink-all {
+    padding: 0 0.5rem 2rem 0.5rem
+  }
+
+  /* End Background */
+
+  /* Welcome section */
+
+  .pf-welcome-width {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 65vh;
+  }
+
+  .pf-img-rounded {
+    width: 80%;
+    text-align: center;
+  }
+
+  .pf-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pf-navbutton {
+    margin: 1rem auto;
+    width: 15rem;
+  }
+
+  /* End welcome section */
+
+  /* My history section */
+
+  .pf-logo {
+    display: none;
+  }
+
+  .pf-history {
+    display: initial;
+  }
+
+  .pf-mgen, .pf-wcs {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1.5rem;
+  }
+
+  .pf-important-text {
+    width: 100%;
+  }
+
+  /* End my history section */
+
+  /* My projects section */
+
+  .card {
+    width: 19rem;
+    margin:2rem auto;
+  }
+
+  .pf-box-projects {
+    display: initial;
+  }
+
+  /* End my projects section */
+
+}
+
+/* End responsive */

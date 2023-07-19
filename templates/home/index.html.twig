@@ -1,20 +1,20 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %} {{ parent() }} - Bienvenue sur mon portfolio !{% endblock %}
 
 {% block body %}
-    <div class="p-5">
-        <button>Classique</button>
-        <button class="pf-navbutton">Nav Button</button>
-        <button class="pf-button-edit">Modifier</button>
-        <button class="pf-button-delete">Supprimer</button>
+    <div class="pf-pink-bottom">
+        {% include '_includes/navbar.html.twig' %}
+        {% include '_includes/welcome.html.twig'%}
     </div>
-    <div>
-        <form>
-            <label class="form-label">Adresse mail</label>
-            <input class="form-control" type="text">
-        </form>
-
+    <div class="pf-pink-top">
+        {% include '_includes/my_history.html.twig' %}
     </div>
-
+    <div class="pf-pink-all">
+        {% include '_includes/my_project.html.twig' %}
+    </div>
+    <div class="pf-pink-bottom">
+        {% include '_includes/contact.html.twig' %}
+        {% include '_includes/footer.html.Twig' %}
+    </div>
 {% endblock %}
