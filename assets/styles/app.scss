@@ -10,6 +10,7 @@ $primary: #D1A8A5FF;
 @import "_includes/form.scss";
 @import "_includes/title.scss";
 @import "_includes/home.scss";
+@import "_includes/footer.scss";
 
 * {
     color: $black-color;
@@ -19,6 +20,15 @@ $primary: #D1A8A5FF;
     box-sizing: border-box;
 }
 
+li {
+    list-style: none;
+}
+
 a {
     text-decoration: none;
+    color: $black-color;
+}
+
+a:hover {
+    text-decoration: underline;
 }
