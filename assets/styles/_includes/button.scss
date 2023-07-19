@@ -9,6 +9,7 @@ button, .pf-button {
 .pf-navbutton {
   padding: 8px 20px;
   border: solid 1px $secondary-color;
+  background-color: transparent;
 }
 
 button:hover, .pf-button:hover, .pf-navbutton:hover {
@@ -36,3 +37,5 @@ button:hover, .pf-button:hover, .pf-navbutton:hover {
   padding: 0;
   text-decoration: underline;
 }
+
+

@@ -8,3 +8,10 @@ footer {
   left: 0;
   right: 0;
 }
+
+@media screen and (max-width:769px) {
+  footer ul {
+    text-align: center;
+    padding-left: 0;
+  }
+}

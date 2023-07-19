@@ -99,3 +99,88 @@ svg {
 }
 
 /* End contact section */
+
+/* Responsive */
+
+@media screen and (max-width:769px) {
+
+  /* Background */
+
+  .pf-pink-bottom {
+    background-image: -webkit-linear-gradient(156deg, #F4EAE9 50%, #ffffff 50%);
+  }
+
+  .pf-pink-top {
+    background-image: -webkit-linear-gradient(24deg, #ffffff 50%, #F4EAE9 50%);
+    padding: 0 0.5rem;
+  }
+
+  .pf-pink-all {
+    padding: 0 0.5rem 2rem 0.5rem
+  }
+
+  /* End Background */
+
+  /* Welcome section */
+
+  .pf-welcome-width {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 65vh;
+  }
+
+  .pf-img-rounded {
+    width: 80%;
+    text-align: center;
+  }
+
+  .pf-nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .pf-navbutton {
+    margin: 1rem auto;
+    width: 15rem;
+  }
+
+  /* End welcome section */
+
+  /* My history section */
+
+  .pf-logo {
+    display: none;
+  }
+
+  .pf-history {
+    display: initial;
+  }
+
+  .pf-mgen, .pf-wcs {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 1.5rem;
+  }
+
+  .pf-important-text {
+    width: 100%;
+  }
+
+  /* End my history section */
+
+  /* My projects section */
+
+  .card {
+    width: 19rem;
+    margin:2rem auto;
+  }
+
+  .pf-box-projects {
+    display: initial;
+  }
+
+  /* End my projects section */
+
+}
+
+/* End responsive */
