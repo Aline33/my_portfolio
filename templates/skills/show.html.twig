@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{skill.name}}{% endblock %}
+
+{% block body %}
+    <h2>{{ skill.name }}</h2>
+    {% for project in skill.projects %}
+        <p>{{ project.name }}</p>
+    {% endfor %}
+    <a href="{{ path('app_skills_edit', {'id': skill.id}) }}" class="pf-button-edit">Modifier</a>
+    {{ include('skills/delete.html.twig') }}
+
+{% endblock %}
