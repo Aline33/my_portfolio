@@ -41,4 +41,10 @@ class HomeController extends AbstractController
             'form' => $form
         ]);
     }
+
+    #[Route('/admin', name: 'app_admin')]
+    public function admin(): Response
+    {
+        return $this->render('home/admin.html.twig');
+    }
 }
