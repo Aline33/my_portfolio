@@ -15,6 +15,7 @@ class PicturesFixtures extends Fixture implements DependentFixtureInterface
             $picture = new Pictures();
             $picture->setFile('https://placehold.co/800x500');
             $picture->setName('Projet ' . $i);
+            $picture->setIsMain(true);
             $picture->setProject($this->getReference('project_' . $i));
             $manager->persist($picture);
             $rand = rand(0, 4);
