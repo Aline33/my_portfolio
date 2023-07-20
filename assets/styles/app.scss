@@ -12,6 +12,7 @@ $primary: #D1A8A5FF;
 @import "_includes/home.scss";
 @import "_includes/footer.scss";
 @import "_includes/project.scss";
+@import "_includes/admin.scss";
 
 * {
     color: $black-color;
@@ -32,4 +33,8 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+.img {
+    border-radius: $border-radius;
 }
