@@ -12,7 +12,14 @@ button, .pf-button {
   background-color: transparent;
 }
 
-button:hover, .pf-button:hover, .pf-navbutton:hover {
+.pf-button-admin {
+  font-family: $font-title;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem 0;
+}
+
+button:hover, .pf-button:hover, .pf-navbutton:hover, .pf-button-admin:hover {
   background-color: $secondary-color;
   border: solid 1px $secondary-color;
   color: $white-color;
@@ -38,5 +45,6 @@ button:hover, .pf-button:hover, .pf-navbutton:hover {
   padding: 0;
   text-decoration: underline;
 }
+
 
 

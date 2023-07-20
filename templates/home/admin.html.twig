@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ parent() }} - Bienvenue sur la page admin !{% endblock %}
+
+{% block body %}
+    {% include '_includes/navbar.html.twig' %}
+    <div class="">
+        <div class="text-end pf-button-seewebsite">
+            <a class="pf-button" href="{{ path('app_home') }}">Voir le site</a>
+        </div>
+        <div class="d-flex">
+            <div class="pf-circle-contain">
+                <button class="pf-button-admin" id="pf-btn-project-js">Projets</button>
+                <button class="pf-button-admin" id="pf-btn-skill-js">Compétences</button>
+                <div class="circle">
+                </div>
+            </div>
+            <div class="pf-card">
+                <div class="pf-table-admin" id="pf-project-js">
+                    <div class="row px-2">
+                        <h3 class="pf-h3-admin text-center col-1 offset-5">Projets</h3>
+                        <div class="text-end col-6 pt-3">
+                            <a class="pf-button pf-button-add" href="{{ path('app_projects_new') }}">Ajouter un projet</a>
+                        </div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Description</th>
+                                <th>Couleur</th>
+                                <th>Compétences</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for project in projects %}
+                            <tr>
+                                <td>{{ project.id }}</td>
+                                <td>{{ project.name }}</td>
+                                <td>{{ project.description }}</td>
+                                <td style="background-color: {{ project.color }}">{{ project.color }}</td>
+                                <td>
+                                    {% for skill in project.skills %}
+                                        {{ skill.name }}
+                                        {% if not loop.last %} -{% endif %}
+                                    {% endfor %}
+                                </td>
+                                <td>
+                                    <a class="pf-button-edit" href="{{ path('app_projects_edit', {id: project.id}) }}">Modifier</a>
+                                    <a class="pf-button-delete" href="{{ path('app_projects_delete', {id: project.id}) }}">Supprimer</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <div class="pf-table-admin hidden" id="pf-skill-js">
+                    <div class="row px-2">
+                        <h3 class="pf-h3-admin text-center col-1 offset-5">Compétences</h3>
+                        <div class="text-end col-6 pt-3">
+                            <a class="pf-button pf-button-add" href="{{ path('app_projects_new') }}">Ajouter une compétence</a>
+                        </div>
+                    </div>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Nom</th>
+                                <th>Projects</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        {% for skill in skills %}
+                            <tr>
+                                <td>{{ skill.id }}</td>
+                                <td>{{ skill.name }}</td>
+                                <td>
+                                    {% for project in skill.projects %}
+                                        {{ project.name }}
+                                        {% if not loop.last %} -{% endif %}
+                                    {% endfor %}
+                                </td>
+                                <td class="d-flex flex-column">
+                                    <a class="pf-button-edit" href="{{ path('app_skills_edit', {id: skill.id}) }}">Modifier</a>
+                                    <a class="pf-button-delete" href="{{ path('app_skills_delete', {id: skill.id}) }}">Supprimer</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include '_includes/footer.html.twig' %}
+    <script>
+        const project = document.getElementById('pf-project-js');
+        const skill = document.getElementById('pf-skill-js');
+        const btnProject = document.getElementById('pf-btn-project-js');
+        const btnSkill = document.getElementById('pf-btn-skill-js');
+        btnSkill.addEventListener('click', event => {
+            project.classList.add('hidden');
+            skill.classList.remove('hidden');
+        });
+        btnProject.addEventListener('click', event => {
+            project.classList.remove('hidden');
+            skill.classList.add('hidden');
+        });
+
+    </script>
+{% endblock %}

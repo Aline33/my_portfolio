@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Form\ContactType;
 use App\Repository\ProjectsRepository;
+use App\Repository\SkillsRepository;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -39,6 +40,15 @@ class HomeController extends AbstractController
         return $this->render('home/index.html.twig', [
             'projects' => $projectsRepository->findBy([], ['id' => 'DESC']),
             'form' => $form
+        ]);
+    }
+
+    #[Route('/admin', name: 'app_admin')]
+    public function admin(ProjectsRepository $projectsRepository, SkillsRepository $skillsRepository): Response
+    {
+        return $this->render('home/admin.html.twig', [
+            'projects' => $projectsRepository->findBy([], ['id' => 'DESC']),
+            'skills' =>$skillsRepository->findBy([], ['id' => 'DESC']),
         ]);
     }
 }
