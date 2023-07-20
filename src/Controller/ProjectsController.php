@@ -2,8 +2,10 @@
 
 namespace App\Controller;
 
+use App\Entity\Pictures;
 use App\Entity\Projects;
 use App\Form\ProjectsType;
+use App\Repository\PicturesRepository;
 use App\Repository\ProjectsRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -43,10 +45,15 @@ class ProjectsController extends AbstractController
     }
 
     #[Route('/{id}', name: 'app_projects_show', methods: ['GET'])]
-    public function show(Projects $project): Response
+    public function show(Projects $project, PicturesRepository $pictureRepository): Response
     {
+        $mainPicture = $pictureRepository->findOneBy(['project' => $project, 'isMain' => true]);
+        $pictures = $pictureRepository->findBy(['project' => $project, 'isMain' => false]);
+
         return $this->render('projects/show.html.twig', [
             'project' => $project,
+            'mainPicture' => $mainPicture,
+            'pictures' => $pictures,
         ]);
     }
 

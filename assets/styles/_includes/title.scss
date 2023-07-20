@@ -16,6 +16,17 @@ h2 {
   padding: 4rem 0 2rem 0;
 }
 
+.pf-h2-project {
+  padding: 0 0 2rem 0;
+}
+
+h3 {
+  font-family: $font-title;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 2rem 0 1rem 0;
+}
+
 @media screen and (max-width:769px) {
   .pf-welcome {
     width: 18rem;
