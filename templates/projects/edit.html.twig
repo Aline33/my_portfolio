@@ -1,13 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Projects{% endblock %}
+{% block title %}{{ parent() }} - Modification du projet {{ project.name }}{% endblock %}
 
 {% block body %}
-    <h1>Edit Projects</h1>
+    {% include '_includes/navbar.html.twig' %}
+<div class="pf-card-form p-2">
+    <a class="pf-button" href="{{ path('app_admin') }}">Retour</a>
+    <h2>Modifie le projet {{ project.name }}</h2>
 
-    {{ include('projects/_form.html.twig', {'button_label': 'Update'}) }}
-
-    <a href="{{ path('app_projects_index') }}">back to list</a>
+    {{ include('projects/_form.html.twig', {'button_label': 'Mettre à jour'}) }}
 
     {{ include('projects/_delete_form.html.twig') }}
+</div>
 {% endblock %}

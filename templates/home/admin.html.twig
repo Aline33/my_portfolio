@@ -49,7 +49,7 @@
                                 </td>
                                 <td>
                                     <a class="pf-button-edit" href="{{ path('app_projects_edit', {id: project.id}) }}">Modifier</a>
-                                    <a class="pf-button-delete" href="{{ path('app_projects_delete', {id: project.id}) }}">Supprimer</a>
+                                    {{ include('projects/_delete_form.html.twig') }}
                                 </td>
                             </tr>
                         {% endfor %}

@@ -1,11 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Projects{% endblock %}
+{% block title %}{{ parent() }} - Ajoute un nouveau projet{% endblock %}
 
 {% block body %}
-    <h1>Create new Projects</h1>
+    {% include '_includes/navbar.html.twig' %}
+<div class="pf-card-form p-2">
+    <a class="pf-button" href="{{ path('app_admin') }}">Retour</a>
+    <h2>Ajoute un nouveau projet</h2>
 
-    {{ include('projects/_form.html.twig') }}
-
-    <a href="{{ path('app_projects_index') }}">back to list</a>
+    {{ include('projects/_form.html.twig', {'button_label': 'Ajouter'}) }}
+</div>
 {% endblock %}
