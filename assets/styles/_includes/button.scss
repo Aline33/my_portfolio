@@ -16,6 +16,7 @@ button:hover, .pf-button:hover, .pf-navbutton:hover {
   background-color: $secondary-color;
   border: solid 1px $secondary-color;
   color: $white-color;
+  text-decoration: none;
 }
 
 .pf-button-edit {
