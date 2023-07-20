@@ -6,4 +6,14 @@ form label {
 form input {
   // utiliser la class bootstrap form-control
   border-radius: $border-radius;
+  margin-bottom: 1rem;
+}
+
+.pf-check-text label {
+  font-weight: initial;
+  margin: 1rem 0;
+}
+
+.pf-check-text input {
+  margin-top: 1.2rem;
 }
