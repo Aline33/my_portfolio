@@ -1,11 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ajouter une compétence{% endblock %}
+{% block title %}{{ parent() }} - Ajouter une compétence{% endblock %}
 
 {% block body %}
-    <h2>Ajouter une compétence</h2>
+    {% include '_includes/navbar.html.twig' %}
+    <div class="pf-card-form p-2">
+    <a class="pf-button" href="{{ path('app_admin') }}">Retour</a>
+    <h2>Ajoute une compétence</h2>
     {{ form_start(form) }}
         {{ form_row(form.name) }}
-        <button type="submit">Ajouter</button>
+        <div class="text-center p-2">
+            <button type="submit">Ajouter</button>
+        </div>
     {{ form_end(form) }}
+    {% include '_includes/footer.html.twig' %}
 {% endblock %}

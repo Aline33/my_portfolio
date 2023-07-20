@@ -1,11 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Modifier compétence {{skill.name}}{% endblock %}
+{% block title %}{{ parent() }} - Modifier compétence {{skill.name}}{% endblock %}
 
 {% block body %}
-    <h2>Modifier compétence {{skill.name}}</h2>
-    {{ form_start(form) }}
-        {{ form_row(form.name) }}
-        <button type="submit">Modifier</button>
-    {{ form_end(form) }}
+    {% include '_includes/navbar.html.twig' %}
+    <div class="pf-card-form p-2">
+        <a class="pf-button" href="{{ path('app_admin') }}">Retour</a>
+        <h2>Modifie compétence {{skill.name}}</h2>
+        {{ form_start(form) }}
+            {{ form_row(form.name) }}
+        <div class="text-center p-2">
+                <button type="submit">Modifier</button>
+        </div>
+        {{ form_end(form) }}
+        {{ include('skills/delete.html.twig') }}
+    </div>
+    {% include '_includes/footer.html.twig' %}
 {% endblock %}

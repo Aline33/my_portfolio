@@ -42,7 +42,7 @@ class SkillsController extends AbstractController
         if($form->isSubmitted() && $form->isValid()) {
             $skillsRepository->save($skill, true);
 
-            return $this->redirectToRoute('app_skills');
+            return $this->redirectToRoute('app_admin');
         }
     return $this->render('Skills/new.html.twig', [
         'form' => $form,
@@ -58,7 +58,7 @@ class SkillsController extends AbstractController
         if($form->isSubmitted() && $form->isValid()) {
             $skillsRepository->save($skill, true);
 
-            return $this->redirectToRoute('app_skills');
+            return $this->redirectToRoute('app_admin');
         }
     return $this->render('Skills/edit.html.twig', [
         'form' => $form,
@@ -66,14 +66,14 @@ class SkillsController extends AbstractController
     ]);
     }
 
-    #[Route('/delete/{id}', name: 'app_skills_delete')]
+    #[Route('/{id}', name: 'app_skills_delete')]
     public function delete(Skills $skill, SkillsRepository $skillsRepository, Request $request): Response
     {
         if ($this->isCsrfTokenValid('delete' . $skill->getId(), $request->request->get('_token'))) {
             $skillsRepository->remove($skill, true);
         }
 
-        return $this->redirectToRoute('app_skills');
+        return $this->redirectToRoute('app_admin');
     }
 
 }
