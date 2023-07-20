@@ -1,4 +1,15 @@
+
+<div class="p-2">
 {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">{{ button_label|default('Save') }}</button>
+    {{ form_row(form.name) }}
+    {{ form_row(form.description) }}
+    {{ form_row(form.color) }}
+    <div class="pf-box-skills">
+        {{ form_row(form.skills) }}
+    </div>
+    <div class="text-center p-2">
+        <button class="pf-button">{{ button_label|default('Save') }}</button>
+    </div>
 {{ form_end(form) }}
+</div>
+{% include '_includes/footer.html.twig' %}

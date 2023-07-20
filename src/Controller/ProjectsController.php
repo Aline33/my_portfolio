@@ -35,7 +35,7 @@ class ProjectsController extends AbstractController
             $entityManager->persist($project);
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_projects_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_admin', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('projects/new.html.twig', [
@@ -44,7 +44,7 @@ class ProjectsController extends AbstractController
         ]);
     }
 
-    #[Route('/{id}', name: 'app_projects_show', methods: ['GET'])]
+    #[Route('/show/{id}', name: 'app_projects_show', methods: ['GET'])]
     public function show(Projects $project, PicturesRepository $pictureRepository): Response
     {
         $mainPicture = $pictureRepository->findOneBy(['project' => $project, 'isMain' => true]);
@@ -66,7 +66,7 @@ class ProjectsController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
 
-            return $this->redirectToRoute('app_projects_index', [], Response::HTTP_SEE_OTHER);
+            return $this->redirectToRoute('app_admin', [], Response::HTTP_SEE_OTHER);
         }
 
         return $this->render('projects/edit.html.twig', [
@@ -83,6 +83,6 @@ class ProjectsController extends AbstractController
             $entityManager->flush();
         }
 
-        return $this->redirectToRoute('app_projects_index', [], Response::HTTP_SEE_OTHER);
+        return $this->redirectToRoute('app_admin', [], Response::HTTP_SEE_OTHER);
     }
 }

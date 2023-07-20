@@ -22,7 +22,7 @@
                 </div>
             </div>
             <div class="pf-contain text-md-end text-center">
-                <img class="pf-image1" src="{{ mainPicture.file }}" alt=""/>
+                    <img class="pf-image1" src="{{ mainPicture.file | default('https://placehold.co/600x400') }}" alt=""/>
             </div>
         </div>
         {% if pictures is not empty %}
