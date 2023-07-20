@@ -60,7 +60,7 @@
                     <div class="row px-2">
                         <h3 class="pf-h3-admin text-center col-1 offset-5">Compétences</h3>
                         <div class="text-end col-6 pt-3">
-                            <a class="pf-button pf-button-add" href="{{ path('app_projects_new') }}">Ajouter une compétence</a>
+                            <a class="pf-button pf-button-add" href="{{ path('app_skills_new') }}">Ajouter une compétence</a>
                         </div>
                     </div>
                     <table>
@@ -85,7 +85,7 @@
                                 </td>
                                 <td class="d-flex flex-column">
                                     <a class="pf-button-edit" href="{{ path('app_skills_edit', {id: skill.id}) }}">Modifier</a>
-                                    <a class="pf-button-delete" href="{{ path('app_skills_delete', {id: skill.id}) }}">Supprimer</a>
+                                    {{ include('skills/delete.html.twig') }}
                                 </td>
                             </tr>
                         {% endfor %}
