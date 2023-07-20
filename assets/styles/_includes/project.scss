@@ -1,7 +1,7 @@
 .pf-bg-project {
   width: 100%;
   padding: 0 4rem;
-  background-image: -webkit-linear-gradient(122.5deg, #B8F5CD 50%, #ffffff 50%);
+  background-image: -webkit-linear-gradient(127.5deg, #B8F5CD 50%, #ffffff 50%);
 }
 
 .pf-image1 {
@@ -28,8 +28,12 @@
 @media screen and (max-width:769px) {
 
   .pf-bg-project {
-    background-image: -webkit-linear-gradient(164deg, #B8F5CD 50%, #ffffff 50%);
+    background-image: -webkit-linear-gradient(162deg, #B8F5CD 50%, #ffffff 50%);
     padding: 0;
+  }
+
+  .pf-btn-return {
+    margin: 2rem 0 0 1rem;
   }
 
   .pf-container {

@@ -5,6 +5,9 @@
 {% block body %}
     <div class="pf-bg-project">
     {% include '_includes/navbar.html.twig' %}
+        <div class="pf-btn-return">
+            <a class="pf-button" href="{{ path('app_home') }}">Retour</a>
+        </div>
         <div class="pf-container d-md-flex justify-content-md-between">
             <div class="pf-contain pf-contain1">
                 <h2 class="pf-h2-project">{{ project.name }}</h2>
