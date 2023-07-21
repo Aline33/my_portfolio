@@ -35,7 +35,7 @@ The application is designed to present my work and my skills.
 ```
 
 - Set up the local database
-  ```bash
+```bash
   symfony console doctrine:database:create 
   ```
 ```bash
