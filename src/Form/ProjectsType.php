@@ -49,6 +49,7 @@ class ProjectsType extends AbstractType
                 'choice_label' => 'name',
                 'multiple' => true,
                 'expanded' => true,
+                'by_reference' => false,
                 'label' => 'Compétences utilisées dans le projet',
                 'attr' => [
                     'placeholder' => 'Entre les compétences utilisées dans le projet',
